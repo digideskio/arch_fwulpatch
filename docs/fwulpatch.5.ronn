@@ -1,0 +1,20 @@
+fwulpatch(1) -- FWUL aims to be an easy to use Android User Linux
+====
+
+## DESCRIPTION
+
+This package provides additional patches/fixes for a released FWUL major version.
+Sometimes it is useful to provide just a hotfix for the persistent FWUL releases so not a full ISO has to be downloaded and re-flashed.
+
+Hint: Using forgetful mode means you have to re-apply patches on every boot manually!
+
+## AUTHOR
+
+steadfasterX <steadfastX | boun.cr>
+
+## SEE ALSO
+
+- [FWUL on XDA](https://tinyurl.com/FWULatXDA)
+- [FWUL on github](https://github.com/Carbon-user/build_fwul)
+
+
