@@ -6,7 +6,7 @@
 ########################################################################################
 
 # include and setup
-source /var/lib/fwul/generic.vars 
+source /var/lib/fwul/generic.vars && source $FWULLIB/generic.func
 [ $? -ne 0 ] && echo "ERROR Cant include required lib" && exit
 BIN=${0##*/}
 LOG=$LOGPATH/${BIN/sh/log}
