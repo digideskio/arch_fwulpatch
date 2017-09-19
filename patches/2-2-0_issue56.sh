@@ -1,22 +1,28 @@
 #!/bin/bash
-#===============================================================================
+########################################################################################
 #
-#          FILE: 2-2-0_issue56.sh
+# HOTFIX FOR FWUL PERSISTENT
 # 
-#         USAGE: ./2-2-0_issue56.sh 
-# 
-#   DESCRIPTION: 
-# 
-#===============================================================================
+########################################################################################
+
+source /var/lib/fwul/generic.vars
 
 ME=$(id -u)
-
 [ $ME -ne 0 ] && echo "ERROR you need to run this script as root" && exit
 
-pacman -Q | grep downgrade || pacman --noconfirm -S downgrade
+pacman -Q | grep downgrade || pacman --noconfirm -S downgrade >> $LOG 2>&1
 
-adb kill-server
-yes | LANG=C downgrade android-tools-7.1.2_r27-1
-find /home -type f -name adbkey* -exec rm {} \;
+echo 20
 
+adb kill-server >> $LOG 2>&1
+
+echo 30
+
+yes | LANG=C downgrade android-tools-7.1.2_r27-1 >> $LOG 2>&1
+
+echo 60
+
+find /home -type f -name adbkey* -exec rm -v {} \; >> $LOG 2>&1
+
+echo 100
 
