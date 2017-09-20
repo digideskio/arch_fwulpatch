@@ -29,7 +29,7 @@ echo 60
 find /home -type f -name adbkey* -exec rm -v {} \; >> $LOG 2>&1
 
 # increase version
-F_UPDVER "2.2.0"
+F_UPDVER "2.2" "1"
 
 echo 100
 
